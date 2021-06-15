@@ -23,6 +23,8 @@ namespace WpfProject3App
         public MainWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
         }
 
         private void Partij_Click(object sender, RoutedEventArgs e)

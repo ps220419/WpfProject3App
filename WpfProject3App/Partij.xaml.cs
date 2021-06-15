@@ -27,6 +27,8 @@ namespace WpfProject3App
         {
             InitializeComponent();
             FillDataGrid();
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
         }
 
 
