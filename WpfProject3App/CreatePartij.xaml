@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfProject3App.CreatePartij"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfProject3App"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreatePartij">
+    <StackPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Partij:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbPartij"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Adres:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbAdres"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Postcode:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbPostcode"/>
+        </DockPanel>
+        <DockPanel  Margin="0,5">
+            <TextBlock Width="100" Text="Gemeente:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbGemeente"/>
+        </DockPanel>
+        <DockPanel  Margin="0,5">
+            <TextBlock Width="100" Text="EmailAdres:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbEmailAdres"/>
+        </DockPanel>
+        <DockPanel  Margin="0,5">
+            <TextBlock Width="100" Text="Telefoon Nummer"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbTelefoonNummer"/>
+        </DockPanel>
+        <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Green" Content="Add" Click="Create_Click"/>
+    </StackPanel>
+
+</Window>

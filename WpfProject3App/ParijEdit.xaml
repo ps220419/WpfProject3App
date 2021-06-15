@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfProject3App.ParijEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProject3App"
+        mc:Ignorable="d"
+        Title="ParijEdit" Height="450" Width="800">
+    <StackPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Partij Id:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbId"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Partij:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" IsReadOnly="True" x:Name="tbPartij"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Adres:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbAdres"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Postcode:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbPostcode"/>
+        </DockPanel>
+        <DockPanel  Margin="0,5">
+            <TextBlock Width="100" Text="Gemeente:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbGemeente"/>
+        </DockPanel>
+        <DockPanel  Margin="0,5">
+            <TextBlock Width="100" Text="EmailAdres:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbEmailAdres"/>
+        </DockPanel>
+        <DockPanel  Margin="0,5">
+            <TextBlock Width="100" Text="Telefoon Nummer"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbTelefoonNummer"/>
+        </DockPanel>
+        <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Orange" Content="Edit" Click="Update_Click"/>
+    </StackPanel>
+</Window>
