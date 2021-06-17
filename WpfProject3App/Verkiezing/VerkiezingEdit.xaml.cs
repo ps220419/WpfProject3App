@@ -33,14 +33,14 @@ namespace WpfProject3App
             tbId.Text = row["VerkiezingId"].ToString();
             tbSoortId.Text = row["SoortId"].ToString();
             cbVerkiezingsoort.Text = row["Verkiezingsoort"].ToString();
-            tbDatum.Text = row["Datum"].ToString();
+            dpDatum.Text = row["Datum"].ToString();
 
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             VerkiezingDB DB = new VerkiezingDB();
-            if (DB.UpdateVerkiezing(tbId.Text, tbSoortId.Text, cbVerkiezingsoort.Text, tbDatum.Text))
+            if (DB.UpdateVerkiezing(tbId.Text, tbSoortId.Text, cbVerkiezingsoort.Text, dpDatum.Text))
             {
                 MessageBox.Show($"Verkiezing {tbId.Text} edited");
                 //MainWindow mainwindow = (MainWindow)Application.Current.MainWindow;

@@ -75,24 +75,43 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CreateVerkiezing.xaml.cs">
+    <Compile Include="Classes\StandpuntDB.cs" />
+    <Compile Include="Classes\VerkiezingSoortDB.cs" />
+    <Compile Include="Standpunt\CreateStandpunt.xaml.cs">
+      <DependentUpon>CreateStandpunt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Verkiezingsoort\VerkiezingSoort.xaml.cs">
+      <DependentUpon>VerkiezingSoort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Verkiezing\CreateVerkiezing.xaml.cs">
       <DependentUpon>CreateVerkiezing.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Verkiezing.xaml.cs">
+    <Compile Include="Standpunt\Standpunt.cs">
+      <DependentUpon>Standpunt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Verkiezing\Verkiezing.xaml.cs">
       <DependentUpon>Verkiezing.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VerkiezingEdit.xaml.cs">
+    <Compile Include="Verkiezing\VerkiezingEdit.xaml.cs">
       <DependentUpon>VerkiezingEdit.xaml</DependentUpon>
     </Compile>
-    <Page Include="CreatePartij.xaml">
+    <Page Include="Partij\CreatePartij.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CreateVerkiezing.xaml">
+    <Page Include="Standpunt\CreateStandpunt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Verkiezingsoort\VerkiezingSoort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Verkiezing\CreateVerkiezing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -102,35 +121,39 @@
     </Compile>
     <Compile Include="Classes\PartijDB.cs" />
     <Compile Include="Classes\VerkiezingDB.cs" />
-    <Compile Include="CreatePartij.xaml.cs">
+    <Compile Include="Partij\CreatePartij.xaml.cs">
       <DependentUpon>CreatePartij.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ParijEdit.xaml">
+    <Page Include="Partij\ParijEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Partij.xaml">
+    <Page Include="Partij\Partij.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Verkiezing.xaml">
+    <Page Include="Standpunt\Standpunt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VerkiezingEdit.xaml">
+    <Page Include="Verkiezing\Verkiezing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Verkiezing\VerkiezingEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParijEdit.xaml.cs">
+    <Compile Include="Partij\ParijEdit.xaml.cs">
       <DependentUpon>ParijEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Partij.xaml.cs">
+    <Compile Include="Partij\Partij.xaml.cs">
       <DependentUpon>Partij.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -159,5 +182,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

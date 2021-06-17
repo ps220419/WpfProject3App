@@ -29,7 +29,7 @@
         </DockPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Datum:"/>
-            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbDatum"/>
+            <DatePicker HorizontalAlignment="Left" Width="200" x:Name="dpDatum"/>
         </DockPanel>
         <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Orange" Content="Edit" Click="Update_Click"/>
     </StackPanel>

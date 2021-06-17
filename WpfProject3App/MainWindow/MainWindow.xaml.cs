@@ -35,7 +35,8 @@ namespace WpfProject3App
 
         private void Standpunten_Click(object sender, RoutedEventArgs e)
         {
-
+            Standpunt Standpunt = new Standpunt();
+            Standpunt.ShowDialog();
         }
 
         private void Thema_Click(object sender, RoutedEventArgs e)
