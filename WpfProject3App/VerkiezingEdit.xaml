@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfProject3App.VerkiezingEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProject3App"
+        mc:Ignorable="d"
+        Title="VerkiezingEdit" Height="450" Width="800">
+    <StackPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Verkiezing Id:"/>
+            <TextBox IsReadOnly="True" HorizontalAlignment="Left" Width="200" x:Name="tbId"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Soort Id:"/>
+            <TextBox  HorizontalAlignment="Left" Width="200" IsReadOnly="True" x:Name="tbSoortId"/>
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Verkiezzingssoort:"/>
+            <ComboBox HorizontalAlignment="Left" Width="200" x:Name="cbVerkiezingsoort" >
+                <ComboBoxItem>Eerste Kamerverkiezing</ComboBoxItem>
+                <ComboBoxItem>Tweede Kamerverkiezing</ComboBoxItem>
+                <ComboBoxItem>Provinciale Statenverkiezing</ComboBoxItem>
+                <ComboBoxItem>Waterschapverkiezing</ComboBoxItem>
+                <ComboBoxItem>Gemeenteraadsverkiezing</ComboBoxItem>
+                <ComboBoxItem>Europese verkiezing</ComboBoxItem>
+            </ComboBox>
+           
+        </DockPanel>
+        <DockPanel Margin="0,5">
+            <TextBlock Width="100" Text="Datum:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbDatum"/>
+        </DockPanel>
+        <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Orange" Content="Edit" Click="Update_Click"/>
+    </StackPanel>
+</Window>

@@ -45,7 +45,7 @@ namespace WpfProject3App.Classes
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "INSERT INTO `Partij` ( `PartijName`,`Adres`, `Postcode`, `Gemeente`, `EmailAdres`, `Telefoonnummer`) VALUES ( @PartijName, @Adres, @Postcode, @Gemeente, @EmailAdres, @Telefoonnummer) ";
+                command.CommandText = "INSERT INTO `partij` ( `PartijName`,`Adres`, `Postcode`, `Gemeente`, `EmailAdres`, `Telefoonnummer`) VALUES ( @PartijName, @Adres, @Postcode, @Gemeente, @EmailAdres, @Telefoonnummer) ";
                 command.Parameters.AddWithValue("@PartijName", PartijName);
                 command.Parameters.AddWithValue("@Adres", PartijAdres);
                 command.Parameters.AddWithValue("@Postcode", PartijPostcode);
@@ -73,7 +73,7 @@ namespace WpfProject3App.Classes
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "UPDATE `Partij` SET `PartijName` = @PartijName, `Adres` = @Adres, `Postcode` = @Postocde, `Gemeente` = @Gemeente, `EmailAdres` = @EmailAdres, `Telefoonnummer` = @Telefoonnummer WHERE `Partij`.`id` = @id; ";
+                command.CommandText = "UPDATE `partij` SET `PartijName` = @PartijName, `Adres` = @Adres, `Postcode` = @Postocde, `Gemeente` = @Gemeente, `EmailAdres` = @EmailAdres, `Telefoonnummer` = @Telefoonnummer WHERE `partij`.`PartijId` = @id; ";
                 command.Parameters.AddWithValue("@PartijName", PartijName);
                 command.Parameters.AddWithValue("@Adres", PartijAdres);
                 command.Parameters.AddWithValue("@Postcode", PartijPostcode);
@@ -101,7 +101,7 @@ namespace WpfProject3App.Classes
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "DELETE FROM `Partij` WHERE `Partij`.`id` = @id;";
+                command.CommandText = "DELETE FROM `Partij` WHERE `partij`.`PartijId` = @id;";
                 command.Parameters.AddWithValue("@id", id);
                 int nrOfRowsAffected = command.ExecuteNonQuery();
                 succes = (nrOfRowsAffected != 0);

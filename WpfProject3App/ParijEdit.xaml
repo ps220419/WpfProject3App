@@ -9,11 +9,11 @@
     <StackPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Partij Id:"/>
-            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbId"/>
+            <TextBox HorizontalAlignment="Left" IsReadOnly="True" Width="200" x:Name="tbId"/>
         </DockPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Partij:"/>
-            <TextBox HorizontalAlignment="Left" Width="200" IsReadOnly="True" x:Name="tbPartij"/>
+            <TextBox HorizontalAlignment="Left" Width="200"  x:Name="tbPartij"/>
         </DockPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Adres:"/>

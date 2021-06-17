@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WpfProject3App.Classes
 {
-    class Verkiezing
+    class VerkiezingDB
     {
         #region fields
         MySqlConnection _connection = new MySqlConnection("Server=localhost;Database=verkiezingenprj3;Uid=root;Pwd=;");
@@ -67,21 +67,21 @@ namespace WpfProject3App.Classes
             }
             return succes;
         }
-        public bool UpdatePartij(string Id, string PartijName, string PartijAdres, string PartijPostcode, string PartijGemeente, string PartijEmailAdres, string PartijTelefoonnummer)
+
+      
+
+        public bool UpdateVerkiezing(string Id, string SoortId, string VerkiezingSoort, string Datum)
         {
             bool succes = false;
             try
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "UPDATE `Partij` SET `PartijName` = @PartijName, `Adres` = @Adres, `Postcode` = @Postocde, `Gemeente` = @Gemeente, `EmailAdres` = @EmailAdres, `Telefoonnummer` = @Telefoonnummer WHERE `Partij`.`id` = @id; ";
-                command.Parameters.AddWithValue("@PartijName", PartijName);
-                command.Parameters.AddWithValue("@Adres", PartijAdres);
-                command.Parameters.AddWithValue("@Postcode", PartijPostcode);
-                command.Parameters.AddWithValue("@Gemeente", PartijGemeente);
-                command.Parameters.AddWithValue("@EmailAdres", PartijEmailAdres);
-                command.Parameters.AddWithValue("@Telefoonnummer", PartijTelefoonnummer);
-                command.Parameters.AddWithValue("@id", Id);
+                command.CommandText = "UPDATE `verkiezing` SET `VerkiezingId` = @VerkiezingId, `Soort` = @Soort, `Verkiezingsoort` = @Verkiezingsoort, `Datum` = @Datum WHERE `verkiezing`.`VerkiezingId` = @VerkieizngId; ";
+                command.Parameters.AddWithValue("@VerkiezingId", Id);
+                command.Parameters.AddWithValue("@Soort", SoortId);
+                command.Parameters.AddWithValue("@Verkiezingsoort", VerkiezingSoort);
+                command.Parameters.AddWithValue("@Datum", Datum);
                 int nrOfRowsAffected = command.ExecuteNonQuery();
                 succes = (nrOfRowsAffected != 0);
             }
@@ -95,15 +95,15 @@ namespace WpfProject3App.Classes
             }
             return succes;
         }
-        public bool DeletePartij(string id)
+        public bool DeleteVerkiezing(string id)
         {
             bool succes = false;
             try
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "DELETE FROM `Partij` WHERE `Partij`.`id` = @id;";
-                command.Parameters.AddWithValue("@id", id);
+                command.CommandText = "DELETE FROM `verkiezing` WHERE `verkiezing`.`VerkiezingId` = @VerkiezingId;";
+                command.Parameters.AddWithValue("@VerkiezingId", id);
                 int nrOfRowsAffected = command.ExecuteNonQuery();
                 succes = (nrOfRowsAffected != 0);
             }

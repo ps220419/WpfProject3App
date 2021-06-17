@@ -45,7 +45,8 @@ namespace WpfProject3App
 
         private void Verkiezing_Click(object sender, RoutedEventArgs e)
         {
-
+            Verkiezing Verkiezing = new Verkiezing();
+            Verkiezing.ShowDialog();
         }
 
         private void Verkiezingsoort_Click(object sender, RoutedEventArgs e)

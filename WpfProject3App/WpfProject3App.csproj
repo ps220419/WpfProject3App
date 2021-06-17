@@ -75,10 +75,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateVerkiezing.xaml.cs">
+      <DependentUpon>CreateVerkiezing.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Verkiezing.xaml.cs">
       <DependentUpon>Verkiezing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VerkiezingEdit.xaml.cs">
+      <DependentUpon>VerkiezingEdit.xaml</DependentUpon>
+    </Compile>
     <Page Include="CreatePartij.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateVerkiezing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,7 +101,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\PartijDB.cs" />
-    <Compile Include="Classes\Verkiezing.cs" />
+    <Compile Include="Classes\VerkiezingDB.cs" />
     <Compile Include="CreatePartij.xaml.cs">
       <DependentUpon>CreatePartij.xaml</DependentUpon>
     </Compile>
@@ -108,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Verkiezing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerkiezingEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace WpfProject3App
     {
 
         PartijDB _dbPartij = new PartijDB();
+
+       
         public Partij()
         {
             InitializeComponent();
@@ -31,6 +34,7 @@ namespace WpfProject3App
             WindowStyle = WindowStyle.None;
         }
 
+      
 
         public void FillDataGrid()
         {
