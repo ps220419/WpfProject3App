@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfProject3App.Classes;
 
 namespace WpfProject3App
 {
@@ -22,6 +23,19 @@ namespace WpfProject3App
         public CreateVerkiezing()
         {
             InitializeComponent();
+        }
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            VerkiezingDB verkiezing = new VerkiezingDB();
+            if (verkiezing.InsertVerkiezing(Convert.ToString(cbVerkiezingsoort.SelectedItem), Convert.ToString(dpDatum.SelectedDate)))
+            {
+                MessageBox.Show($"Verkiezing created");
+            }
+            else
+            {
+                MessageBox.Show($"creation failed");
+            }
+            this.Close();
         }
     }
 }

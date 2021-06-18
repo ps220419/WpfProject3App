@@ -101,7 +101,7 @@ namespace WpfProject3App.Classes
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "DELETE FROM `Partij` WHERE `partij`.`PartijId` = @id;";
+                command.CommandText = "DELETE FROM `partij` WHERE `partij`.`PartijId` = @id;";
                 command.Parameters.AddWithValue("@id", id);
                 int nrOfRowsAffected = command.ExecuteNonQuery();
                 succes = (nrOfRowsAffected != 0);

@@ -9,19 +9,19 @@
     <StackPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Partij naam:"/>
-            <ComboBox HorizontalAlignment="Left" Width="200" x:Name="cbPartijNaam">
-                <ComboBoxItem></ComboBoxItem>
+            <ComboBox HorizontalAlignment="Left" Width="200"  x:Name="cbPartijNaam">
+                <ComboBoxItem>VVD</ComboBoxItem>
             </ComboBox>
         </DockPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Thema:"/>
             <ComboBox HorizontalAlignment="Left" Width="200" x:Name="cbThema">
-                <ComboBoxItem></ComboBoxItem>
+                <ComboBoxItem>Klimaat</ComboBoxItem>
             </ComboBox>
         </DockPanel>
         <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Standpunt:"/>
-            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbStandpunt"/>
+            <TextBox HorizontalAlignment="Left" Width="400" Height="100" x:Name="tbStandpunt"/>
         </DockPanel>
         <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Green" Content="Add" Click="Create_Click"/>
     </StackPanel>

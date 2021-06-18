@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfProject3App.Classes;
 
 namespace WpfProject3App
 {
@@ -24,17 +25,26 @@ namespace WpfProject3App
             InitializeComponent();
         }
 
-        private void Create_Click(object sender, RoutedEventArgs e)
+        public void Create_Click(object sender, RoutedEventArgs e)
         {
-           StandpuntDB Standpunt = new StandpuntDB();
-            //if (Standpunt.InsertStandpunt(tbPartij.Text, tbAdres.Text, tbPostcode.Text, tbGemeente.Text, tbEmailAdres.Text, tbTelefoonNummer.Text))
-            //{
-            //    MessageBox.Show($"Standpunt created");
-            //}
-            //else
-            //{
-            //    MessageBox.Show($"creation failed");
-            //}
+
+            ComboBoxItem comboPartij = (ComboBoxItem)cbPartijNaam.SelectedItem;
+            string SelectedPartij = comboPartij.Content.ToString();
+
+            ComboBoxItem comboThema = (ComboBoxItem)cbThema.SelectedItem;
+            string SelectedThema = comboPartij.Content.ToString();
+
+
+
+            StandpuntDB Standpunt = new StandpuntDB();
+            if (Standpunt.InsertStandpunt(SelectedPartij, SelectedThema, tbStandpunt.Text))
+            {
+                MessageBox.Show($"Standpunt created");
+            }
+            else
+            {
+                MessageBox.Show($"creation failed");
+            }
             this.Close();
         }
     }

@@ -83,6 +83,9 @@
     <Compile Include="Verkiezingsoort\VerkiezingSoort.xaml.cs">
       <DependentUpon>VerkiezingSoort.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Verkiezingsoort\VerkiezingSoortEdit.xaml.cs">
+      <DependentUpon>VerkiezingSoortEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Verkiezing\CreateVerkiezing.xaml.cs">
       <DependentUpon>CreateVerkiezing.xaml</DependentUpon>
     </Compile>
@@ -107,11 +110,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Verkiezingsoort\VerkiezingSoortEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Verkiezing\CreateVerkiezing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow\MainWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -124,7 +131,7 @@
     <Compile Include="Partij\CreatePartij.xaml.cs">
       <DependentUpon>CreatePartij.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow\MainWindow.xaml.cs">
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

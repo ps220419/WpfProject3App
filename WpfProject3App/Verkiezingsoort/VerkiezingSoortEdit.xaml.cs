@@ -14,45 +14,44 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfProject3App.Classes;
 
-namespace WpfProject3App
+namespace WpfProject3App.Verkiezingsoort
 {
     /// <summary>
-    /// Interaction logic for ParijEdit.xaml
+    /// Interaction logic for VerkiezingSoortEdit.xaml
     /// </summary>
-    public partial class VerkiezingEdit : Window
+    public partial class VerkiezingSoortEdit : Window
     {
-        public VerkiezingEdit(DataRowView row)
+        public VerkiezingSoortEdit(DataRowView row)
         {
             InitializeComponent();
             FillScreen(row);
-
-            
         }
-
 
         public void FillScreen(DataRowView row)
         {
-            tbId.Text = row["VerkiezingId"].ToString();
             tbSoortId.Text = row["SoortId"].ToString();
-            cbVerkiezingsoort.SelectedItem = row["Verkiezingsoort"].ToString();
-            dpDatum.SelectedDate = (DateTime?)row["Datum"];
+            tbVerkiezingSoort.Text = row["Verkiezingsoort"].ToString();
+            
 
         }
 
         private void Update_Click(object sender, RoutedEventArgs e)
         {
-            VerkiezingDB DB = new VerkiezingDB();
-            if (DB.UpdateVerkiezing(tbId.Text, tbSoortId.Text, cbVerkiezingsoort.Text, dpDatum.Text))
+            VerkiezingSoortDB DB = new VerkiezingSoortDB();
+            if (DB.UpdateVerkiezingSoort(tbSoortId.Text, tbVerkiezingSoort.Text))
             {
-                MessageBox.Show($"Verkiezing {tbId.Text} edited");
+                MessageBox.Show($"VerkiezingSoort {tbSoortId.Text} edited");
                 //MainWindow mainwindow = (MainWindow)Application.Current.MainWindow;
                 //mainwindow.FillDataGrid();
             }
             else
             {
-                MessageBox.Show($"editting for {tbId.Text} failed");
+                MessageBox.Show($"editting for {tbSoortId.Text} failed");
             }
             this.Close();
         }
     }
 }
+
+    
+

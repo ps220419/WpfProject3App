@@ -39,21 +39,16 @@ namespace WpfProject3App.Classes
             return result;
         }
 
-        public bool InsertVerkiezing(string PartijName, string PartijAdres, string PartijPostcode, string PartijGemeente, string PartijEmailAdres, string PartijTelefoonNummer)
+        public bool InsertVerkiezing(string VerkiezingSoort, string Datum)
         {
             bool succes = false;
             try
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "INSERT INTO `Partij` ( `PartijName`,`Adres`, `Postcode`, `Gemeente`, `EmailAdres`, `Telefoonnummer`) VALUES ( @PartijName, @Adres, @Postcode, @Gemeente, @EmailAdres, @Telefoonnummer) ";
-                command.Parameters.AddWithValue("@PartijName", PartijName);
-                command.Parameters.AddWithValue("@Adres", PartijAdres);
-                command.Parameters.AddWithValue("@Postcode", PartijPostcode);
-                command.Parameters.AddWithValue("@Gemeente", PartijGemeente);
-                command.Parameters.AddWithValue("@EmailAdres", PartijEmailAdres);
-                command.Parameters.AddWithValue("@Telefoonnummer", PartijTelefoonNummer);
-
+                command.CommandText = "INSERT INTO `verkiezing` ( `VerkiezingId`,`SoortId`, `Verkiezingsoort`, `Datum`) VALUES ( NULL, NULL, @Verkiezingsoort, @Datum) ";
+                command.Parameters.AddWithValue("@Verkiezingsoort", VerkiezingSoort);
+                command.Parameters.AddWithValue("@Datum", Datum);
                 int nrOfRowsAffected = command.ExecuteNonQuery();
                 succes = (nrOfRowsAffected != 0);
             }

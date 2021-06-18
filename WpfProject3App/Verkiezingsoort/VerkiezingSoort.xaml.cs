@@ -14,17 +14,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfProject3App.Classes;
+using WpfProject3App.Verkiezingsoort;
 
 namespace WpfProject3App
 {
     /// <summary>
-    /// Interaction logic for Verkiezing.xaml
+    /// Interaction logic for VerkiezingSoort.xaml
     /// </summary>
-    public partial class VerkiezingSoortDB : Window
+    public partial class VerkiezingSoort : Window
     {
 
         VerkiezingSoortDB _dbVerkiezingSoort = new VerkiezingSoortDB();
-        public VerkiezingSoortDB()
+        
+
+        public VerkiezingSoort()
         {
             InitializeComponent();
             FillDataGrid();
@@ -35,33 +38,33 @@ namespace WpfProject3App
 
         public void FillDataGrid()
         {
-            DataTable verkiezing = _dbVerkiezingSoort.SelectVerkiezing();
-            if (verkiezing != null)
+            DataTable verkiezingsoort = _dbVerkiezingSoort.SelectVerkiezingSoort();
+            if (verkiezingsoort != null)
             {
-                dgVerkiezingen.ItemsSource = verkiezing.DefaultView;
+                dgSoort.ItemsSource = verkiezingsoort.DefaultView;
             }
         }
 
         public void Update_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selectedRow = dgVerkiezingenSoort.SelectedItem as DataRowView;
+            DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
 
-            VerkiezingEdit Edit = new VerkiezingEdit(selectedRow);
+            VerkiezingSoortEdit Edit = new VerkiezingSoortEdit(selectedRow);
             Edit.ShowDialog();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView selectedRow = dgVerkiezingenSoort.SelectedItem as DataRowView;
+            DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
 
-            if (_dbVerkiezingSoort.DeleteVerkiezing(selectedRow["VerkiezingId"].ToString()))
-            {
-                MessageBox.Show($"Verkieizing {selectedRow["VerkiezingId"]} Deleted");
-            }
-            else
-            {
-                MessageBox.Show($"Deletion for {selectedRow["VerkiezingId"]} failed");
-            }
+            //if (_dbVerkiezingSoort.DeleteVerkiezingSoort(selectedRow["SoortId"].ToString()))
+            //{
+            //    MessageBox.Show($"Verkiezingsoort {selectedRow["SoortId"]} Deleted");
+            //}
+            //else
+            //{
+            //    MessageBox.Show($"Deletion for {selectedRow["SoortId"]} failed");
+            //}
 
             FillDataGrid();
         }

@@ -34,7 +34,10 @@ namespace WpfProject3App
             WindowStyle = WindowStyle.None;
         }
 
-      
+        internal static bool InsertVerkiezing(string text1, string text2)
+        {
+            throw new NotImplementedException();
+        }
 
         public void FillDataGrid()
         {

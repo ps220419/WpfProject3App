@@ -1,25 +1,25 @@
-﻿<Window x:Class="WpfProject3App.CreateVerkiezing"
+﻿<Window x:Class="WpfProject3App.Verkiezingsoort.VerkiezingSoortEdit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfProject3App"
+        xmlns:local="clr-namespace:WpfProject3App.Verkiezingsoort"
         mc:Ignorable="d"
-        Title="CreateVerkiezing" Height="450" Width="800">
+        Title="VerkiezingSoortEdit" Height="450" Width="800">
     <StackPanel>
         <DockPanel Margin="0,5">
-            <TextBlock Width="100" Text="Verkiezingsoort:"/>
-            <ComboBox HorizontalAlignment="Left" Width="200" x:Name="cbVerkiezingsoort">
-                <ComboBoxItem></ComboBoxItem>
-            </ComboBox>
-           
-         
+            <TextBlock Width="100" Text="Soort Id:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbSoortId">
+             
+            </TextBox>
+
+
         </DockPanel>
         <DockPanel Margin="0,5">
-            <TextBlock Width="100" Text="Datum:"/>
-            <DatePicker HorizontalAlignment="Left" Width="200" x:Name="dpDatum"></DatePicker>
+            <TextBlock Width="100" Text="Verkiezingsoort:"/>
+            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbVerkiezingSoort"></TextBox>
         </DockPanel>
-       
+
         <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Green" Content="Add" Click="Create_Click"/>
     </StackPanel>
 
