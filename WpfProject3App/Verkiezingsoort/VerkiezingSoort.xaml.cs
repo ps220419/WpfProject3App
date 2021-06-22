@@ -45,13 +45,13 @@ namespace WpfProject3App
             }
         }
 
-        public void Update_Click(object sender, RoutedEventArgs e)
-        {
-            DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
+        //public void Update_Click(object sender, RoutedEventArgs e)
+        //{
+        //    DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
 
-            VerkiezingSoortEdit Edit = new VerkiezingSoortEdit(selectedRow);
-            Edit.ShowDialog();
-        }
+        //    VerkiezingSoortEdit Edit = new VerkiezingSoortEdit(selectedRow);
+        //    Edit.ShowDialog();
+        //}
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {

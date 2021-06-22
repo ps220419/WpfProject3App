@@ -83,6 +83,9 @@
     <Compile Include="Verkiezingsoort\VerkiezingSoort.xaml.cs">
       <DependentUpon>VerkiezingSoort.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Verkiezingsoort\VerkiezingSoortCreate.xaml.cs">
+      <DependentUpon>VerkiezingSoortCreate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Verkiezingsoort\VerkiezingSoortEdit.xaml.cs">
       <DependentUpon>VerkiezingSoortEdit.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Verkiezingsoort\VerkiezingSoort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Verkiezingsoort\VerkiezingSoortCreate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

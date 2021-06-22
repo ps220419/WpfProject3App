@@ -35,6 +35,19 @@ namespace WpfProject3App.Verkiezingsoort
 
         }
 
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            VerkiezingSoortDB Partij = new VerkiezingSoortDB();
+            if (VerkiezingSoort.InsertVerkiezingSoort(tbVerkiezingSoort.Text, tbSoortId.Text))
+            {
+                MessageBox.Show($"Partij created");
+            }
+            else
+            {
+                MessageBox.Show($"creation failed");
+            }
+        }
+
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             VerkiezingSoortDB DB = new VerkiezingSoortDB();
