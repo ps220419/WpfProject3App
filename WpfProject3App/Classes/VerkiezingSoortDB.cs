@@ -94,7 +94,7 @@ namespace WpfProject3App.Classes
             }
             return succes;
         }
-        public bool DeletePartij(string id)
+        public bool DeleteVerkiezingSoort(string id)
         {
             bool succes = false;
             try

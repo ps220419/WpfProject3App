@@ -9,10 +9,6 @@
       Title="CreateVerkiezingSoort">
     <StackPanel>
         <DockPanel Margin="0,5">
-            <TextBlock Width="100" Text="SoortId:"/>
-            <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbSoortId"/>
-        </DockPanel>
-        <DockPanel Margin="0,5">
             <TextBlock Width="100" Text="Verkiezingsoort:"/>
             <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbVerkiezingsoort"/>
         </DockPanel>

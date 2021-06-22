@@ -20,7 +20,7 @@
             <TextBox HorizontalAlignment="Left" Width="200" x:Name="tbVerkiezingSoort"></TextBox>
         </DockPanel>
 
-        <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Green" Content="Add" Click="Create_Click"/>
+        <Button Width="100" Height="25" Margin="120,0" HorizontalAlignment="Left" Background="Orange" Content="Add" Click="Update_Click"/>
     </StackPanel>
 
 </Window>

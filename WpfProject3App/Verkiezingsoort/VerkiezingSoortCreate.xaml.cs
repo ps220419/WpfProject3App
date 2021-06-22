@@ -13,38 +13,29 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfProject3App.Classes;
 
-//namespace WpfProject3App.Verkiezingsoort
-////{
-/// <summary>
-/// Interaction logic for VerkiezingSoortCreate.xaml
-/// </summary>
-//    public partial class VerkiezingSoortCreate : Window
-//    {
-//        public VerkiezingSoortCreate()
-//        {
-//            InitializeComponent();
-//            FillScreen(row);
-//        }
-//        public void FillScreen(DataRowView row)
-//        {
-//            tbSoortId.Text = row["SoortId"].ToString();
-//            tbVerkiezingSoort.Text = row["Verkiezingsoort"].ToString();
+namespace WpfProject3App.Verkiezingsoort
+{ 
+// Interaction logic for VerkiezingSoortCreate.xaml
+// </summary>
 
-
-//        }
-
-
-//        private void Create_Click(object sender, RoutedEventArgs e)
-//        {
-//            VerkiezingSoortDB VerkiezingSoort = new VerkiezingSoortDB();
-//            if (VerkiezingSoort(tbVerkiezingSoort.Text, tbSoortId.Text))
-//            {
-//                MessageBox.Show($"Partij created");
-//            }
-//            else
-//            {
-//                MessageBox.Show($"creation failed");
-//            }
-//        }
-//    }
-//}
+    public partial class VerkiezingSoortCreate : Window
+{
+    public VerkiezingSoortCreate()
+    {
+        InitializeComponent();
+    }
+    private void Create_Click(object sender, RoutedEventArgs e)
+    {
+        VerkiezingSoortDB Soort = new VerkiezingSoortDB();
+        if (Soort.InsertVerkiezingSoort(tbVerkiezingsoort.Text))
+        {
+            MessageBox.Show($"Verkiezingsoort created");
+        }
+        else
+        {
+            MessageBox.Show($"creation failed");
+        }
+        this.Close();
+    }
+}
+}

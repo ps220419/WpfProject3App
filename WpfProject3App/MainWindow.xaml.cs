@@ -52,7 +52,8 @@ namespace WpfProject3App
 
         private void Verkiezingsoort_Click(object sender, RoutedEventArgs e)
         {
-
+            VerkiezingSoort verkiezingsoort = new VerkiezingSoort();
+            verkiezingsoort.ShowDialog();
         }
 
         private void Verkiezingspartijen_Click(object sender, RoutedEventArgs e)

@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <DataGrid  x:Name="dgSoort" SelectionMode="Single" CanUserAddRows="False" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding VerkiezingSoortId}"  Header="ID"/>
+                <DataGridTextColumn Binding="{Binding SoortId}"  Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Verkiezingsoort}"  Header="Verkiezing Soort"/>
                 <DataGridTemplateColumn>
             <DataGridTemplateColumn.CellTemplate>

@@ -45,33 +45,33 @@ namespace WpfProject3App
             }
         }
 
-        //public void Update_Click(object sender, RoutedEventArgs e)
-        //{
-        //    DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
+        public void Update_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
 
-        //    VerkiezingSoortEdit Edit = new VerkiezingSoortEdit(selectedRow);
-        //    Edit.ShowDialog();
-        //}
+            VerkiezingSoortEdit Edit = new VerkiezingSoortEdit(selectedRow);
+            Edit.ShowDialog();
+        }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             DataRowView selectedRow = dgSoort.SelectedItem as DataRowView;
 
-            //if (_dbVerkiezingSoort.DeleteVerkiezingSoort(selectedRow["SoortId"].ToString()))
-            //{
-            //    MessageBox.Show($"Verkiezingsoort {selectedRow["SoortId"]} Deleted");
-            //}
-            //else
-            //{
-            //    MessageBox.Show($"Deletion for {selectedRow["SoortId"]} failed");
-            //}
+            if (_dbVerkiezingSoort.DeleteVerkiezingSoort(selectedRow["SoortId"].ToString()))
+            {
+                MessageBox.Show($"Verkiezingsoort {selectedRow["SoortId"]} Deleted");
+            }
+            else
+            {
+                MessageBox.Show($"Deletion for {selectedRow["SoortId"]} failed");
+            }
 
             FillDataGrid();
         }
 
         private void Create_Click(object sender, RoutedEventArgs e)
         {
-            CreateVerkiezing create = new CreateVerkiezing();
+            VerkiezingSoortCreate create = new VerkiezingSoortCreate();
             create.ShowDialog();
             FillDataGrid();
         }

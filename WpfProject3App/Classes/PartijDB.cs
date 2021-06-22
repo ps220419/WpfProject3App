@@ -73,7 +73,7 @@ namespace WpfProject3App.Classes
             {
                 _connection.Open();
                 MySqlCommand command = _connection.CreateCommand();
-                command.CommandText = "UPDATE `partij` SET `PartijName` = @PartijName, `Adres` = @Adres, `Postcode` = @Postocde, `Gemeente` = @Gemeente, `EmailAdres` = @EmailAdres, `Telefoonnummer` = @Telefoonnummer WHERE `partij`.`PartijId` = @id; ";
+                command.CommandText = "UPDATE `partij` SET `PartijName` = @PartijName, `Adres` = @Adres, `Postcode` = @Postcode, `Gemeente` = @Gemeente, `EmailAdres` = @EmailAdres, `Telefoonnummer` = @Telefoonnummer WHERE `partij`.`PartijId` = @id; ";
                 command.Parameters.AddWithValue("@PartijName", PartijName);
                 command.Parameters.AddWithValue("@Adres", PartijAdres);
                 command.Parameters.AddWithValue("@Postcode", PartijPostcode);
