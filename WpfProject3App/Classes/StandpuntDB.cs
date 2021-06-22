@@ -58,6 +58,7 @@ namespace WpfProject3App.Classes
             {
                 //Problem with the database
             }
+
             finally
             {
                 _connection.Close();
