@@ -46,8 +46,7 @@ namespace WpfProject3App
             if (DB.UpdatePartij(tbId.Text, tbPartij.Text, tbAdres.Text, tbPostcode.Text, tbGemeente.Text, tbEmailAdres.Text, tbTelefoonNummer.Text))
             {
                 MessageBox.Show($"Partij {tbId.Text} edited");
-                //MainWindow mainwindow = (MainWindow)Application.Current.MainWindow;
-                //mainwindow.FillDataGrid();
+               
             }
             else
             {

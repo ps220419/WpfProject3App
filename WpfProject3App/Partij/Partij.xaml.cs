@@ -30,8 +30,7 @@ namespace WpfProject3App
         {
             InitializeComponent();
             FillDataGrid();
-            WindowState = WindowState.Maximized;
-            WindowStyle = WindowStyle.None;
+            
         }
 
         internal static bool InsertVerkiezing(string text1, string text2)

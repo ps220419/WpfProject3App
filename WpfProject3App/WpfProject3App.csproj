@@ -76,9 +76,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\StandpuntDB.cs" />
+    <Compile Include="Classes\ThemaDB.cs" />
     <Compile Include="Classes\VerkiezingSoortDB.cs" />
     <Compile Include="Standpunt\CreateStandpunt.xaml.cs">
       <DependentUpon>CreateStandpunt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Thema.xaml.cs">
+      <DependentUpon>Thema.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemaEdit.xaml.cs">
+      <DependentUpon>ThemaEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Verkiezingsoort\VerkiezingSoort.xaml.cs">
       <DependentUpon>VerkiezingSoort.xaml</DependentUpon>
@@ -106,6 +113,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Standpunt\CreateStandpunt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Thema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThemaEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
